@@ -1,0 +1,28 @@
+{
+    "id":1,
+    "course":"MAD-II",
+    "date":"Jan 19 2022",
+    "description":"live session vuewjs",
+    "attendees":[
+        {
+            "id":"mada123",
+            "name":"ravi"
+        },
+        {
+            "id":"mada124",
+            "name":"raju"
+        },
+        {
+            "id":"mada125",
+            "name":"manju"
+        },
+        {
+            "id":"mada1",
+            "name":"ck"
+        },
+        {
+            "id":"mada130",
+            "name":"rahim"
+        }
+    ]
+}

@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Registration
+{% endblock %}
+
+{% block content %}
+<head>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+
+<body class="text-center">
+    
+     <div class="split-container">
+        <div class="container left-side" align="center">
+            <img class="mb-4" src="../static/image.png" alt="cant display">
+            <h1>Registration</h1>    
+            <form method="POST" action="/register" class="form-register" style="color:white">
+                    {{ form.hidden_tag()}}
+                    <h1> Create your Account</h1>
+                    <br>
+                <table class="table-responsive">
+                    <tr>
+                        <td>
+                            {{form.userName.label()}}
+                        </td>
+                        <td>
+                            {{form.userName(class="form-control ps-5", placeholder="Tracey")}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {{form.emailAddress.label()}}
+                        </td>
+                        <td>
+                            {{form.emailAddress(class="form-control ps-5", placeholder="tracey@gmail.com")}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {{form.password1.label()}}
+                        </td>
+                        <td>
+                            {{form.password1(class="form-control ps-5")}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {{form.password2.label()}}
+                        </td>
+                        <td>
+                            {{form.password2(class="form-control ps-5")}}
+                        </td>
+                    </tr>
+                </table>
+                
+                
+                
+                
+                
+                <br>
+                {{form.submit(class="btn btn-lg btn-block btn-primary")}}
+            </form>
+            <br><br>
+        <div class="checkbox mb-3">
+            <h6>Already have an account?</h6>
+            <a class="btn btn-sm btn-secondary" href="{{url_for('login')}}">Login</a>
+        </div>
+        </div>
+        <div class="right-side">
+            <img src="../static/download.jpeg" alt="empty" height="400px">
+        </div>
+    </div>
+</body>
+{% endblock %}

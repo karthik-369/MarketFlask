@@ -1,0 +1,21 @@
+.split-container {
+    display: flex;
+    height: 100%;
+}
+
+.left-side, .right-side {
+    flex:1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+
+.right-side {
+    background-color: #27b1a3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
