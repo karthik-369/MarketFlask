@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block content %}
+<body class="text-center">
+    
+    
+            <img class="mb-4" src="../static/image.png" alt="cant display">
+            <h1>Login</h1>    
+            <h3>Please login to continue</h3>
+            <form method="POST"  class="form-register" style="color:white">
+                    {{ form.hidden_tag()}}
+                    
+                    <br>
+                <table class="table-responsive" align="center">
+                    <tr>
+                        <td>
+                            {{form.userName.label()}}
+                        </td>
+                        <td>
+                            {{form.userName(class="form-control ps-5", placeholder="Tracey")}}
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            {{form.password.label()}}
+                        </td>
+                        <td>
+                            {{form.password(class="form-control ps-5")}}
+                        </td>
+                    </tr>
+                   
+                </table>
+                
+                
+                
+                
+                
+                <br>
+                {{form.submit(class="btn btn-lg btn-block btn-primary")}}
+                <br><br>
+                <div class="checkbox mb-3">
+                    <h6>Do not have an account?</h6>
+                    <a class="btn btn-sm btn-secondary" href="{{url_for('registerPage')}}">Register</a>
+                </div>
+            </form>
+            <br><br>
+</body>
+{% endblock %}
